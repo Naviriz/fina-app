@@ -71,8 +71,8 @@ export default function CreateTransactionCard({
       toast.success("Transaction created succesfully");
     },
     onError: (error) => {
-      toast.success(
-        "Error instanceof Error ? error.message : 'Failed to create transaction",
+      toast.error(
+        error instanceof Error ? error.message : "Failed to create transaction",
       );
     },
   });
